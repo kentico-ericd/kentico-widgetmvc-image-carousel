@@ -1,0 +1,24 @@
+﻿@using Kentico.PageBuilder.Web.Mvc
+@using Kentico.Web.Mvc
+@using KenticoMarketplace.Models.InlineEditors.PageTypeSelector
+@model PageTypeSelectorModel
+
+@using (Html.Kentico().BeginInlineEditor("page-type-selector", Model.PropertyName))
+{
+    if(Model.Types.Count == 0)
+    {
+        <span><b>Error</b> - No page types found which contain the following fields:</span>
+        <ul>
+            <li>Title</li>
+            <li>Text</li>
+            <li>Image</li>
+            <li>CtaText (optional)</li>
+            <li>CtaUrl (optional)</li>
+        </ul>
+    }
+    else
+    {
+        <b style="color:#eeeeee">Page type:</b><br/>
+        @Html.DropDownList("selector-drop-down", Model.Types)
+    }
+}

@@ -1,0 +1,10 @@
+﻿@using Kentico.PageBuilder.Web.Mvc
+@using Kentico.Web.Mvc
+@using KenticoMarketplace.Models.InlineEditors.PathTextBoxEditor
+@model PathTextBoxEditorModel
+
+@using (Html.Kentico().BeginInlineEditor("path-text-box-editor", Model.PropertyName))
+{
+    <b style="color:#eeeeee">Path:</b><br />
+    @Html.TextBox("path-box", Model.Value);
+}

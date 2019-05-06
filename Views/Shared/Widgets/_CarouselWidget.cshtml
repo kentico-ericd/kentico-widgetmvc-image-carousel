@@ -1,0 +1,74 @@
+﻿@using KenticoMarketplace.Models.InlineEditors.PageTypeSelector
+@using KenticoMarketplace.Models.InlineEditors.PathTextBoxEditor
+@using KenticoMarketplace.Models.Widgets.CarouselWidget
+@model KenticoMarketplace.Models.Widgets.CarouselWidget.CarouselWidgetViewModel
+
+
+<script>
+    /* Slick Slider */
+    $(document).ready(function() {
+        $('#@Model.ContainerID .c-slider').slick({
+            autoplay: @Json.Encode(Model.DoAutoplay),
+            speed: 1200,
+            autoplaySpeed: @Model.Delay,
+            pauseOnHover: true,
+            draggable: @Json.Encode(Model.Swiping),
+            rows: @Model.Rows,
+            slidesPerRow: @Model.ItemsPerRow,
+            arrows: false,
+            dots: true,
+            fade: false,
+            adaptiveHeight: true
+        });
+    });
+</script>
+
+<div id="@Model.ContainerID" class="o-wrapper u-bg-color--very-light-grey u-padding-top-bottom-50">
+    <div class="o-container">
+        @if (Context.Kentico().PageBuilder().EditMode)
+        {
+            <div class="slider-inline-editors">
+                @{
+                    Html.RenderPartial("InlineEditors/_PageTypeSelector", new PageTypeSelectorModel
+                    {
+                        PropertyName = nameof(CarouselWidgetProperties.PageType),
+                        Types = Model.AvailableTypes,
+                        Value = Model.PageType
+                    });
+                    Html.RenderPartial("InlineEditors/_PathTextBoxEditor", new PathTextBoxEditorModel
+                    {
+                        PropertyName = nameof(CarouselWidgetProperties.Path),
+                        Value = Model.Path
+                    });
+                }
+            </div>
+        }
+        <h2 id="hTitle" runat="server" class="c-main-title u-text-center" visible="false"></h2>
+        <div class="c-slider">
+            @foreach (CMS.DocumentEngine.TreeNode item in Model.CarouselItems)
+            {
+                string title = item.GetStringValue("Title", ""),
+                text = item.GetStringValue("Text", ""),
+                ctaText = item.GetStringValue("CtaText", ""),
+                ctaUrl = item.GetStringValue("CtaUrl", ""),
+                image = item.GetStringValue("Image", "");
+                <div class="c-banner-content">
+                    <div class="content">
+                        <h3>@title</h3>
+                        @text
+                        @{
+                            if (!String.IsNullOrWhiteSpace(ctaText) && !String.IsNullOrWhiteSpace(ctaUrl))
+                            {
+                                <a href="@ctaUrl" class='c-btn'>@ctaText</a>
+                            }
+                        }
+                    </div>
+                    <br />
+                    <div class="img">
+                        <img src="@URLHelper.GetAbsoluteUrl(image)" alt="@title">
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
