@@ -1,4 +1,6 @@
-.vs
+/.vs
 /obj
 /bin
+/packages
 *.sln
+*.csproj.user
