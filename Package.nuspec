@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Kentico.Mvcwidget.ImageCarousel</id>
+    <version>12.0.0</version>
+    <authors>EricD</authors>
+    <owners>EricD</owners>
+    <projectUrl>https://github.com/kentico-ericd/kentico-widgetmvc-image-carousel</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Image carousel widget for Kentico MVC</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Kentico MVC widget image carousel</tags>
+    <dependencies>
+      <dependency id="Kentico.Libraries" version="12.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="bin\Debug\kentico-widgetmvc-image-carousel.dll" target="lib\net461\kentico-widgetmvc-image-carousel.dll" />
+	<file src="Views\Shared\InlineEditors\_PageTypeSelector.cshtml" target="content\Views\Shared\InlineEditors\_PageTypeSelector.cshtml" />
+	<file src="Views\Shared\InlineEditors\_PathTextBoxEditor.cshtml" target="content\Views\Shared\InlineEditors\_PathTextBoxEditor.cshtml" />
+	<file src="Views\Shared\Widgets\_CarouselWidget.cshtml" target="content\Views\Shared\Widgets\_CarouselWidget.cshtml" />
+	<file src="Content\InlineEditors\PageTypeSelector\pagetypeselector.js" target="content\Content\InlineEditors\PageTypeSelector\pagetypeselector.js" />
+	<file src="Content\InlineEditors\PathTextBoxEditor\pathtextboxeditor.js" target="content\Content\InlineEditors\PathTextBoxEditor\pathtextboxeditor.js" />
+  </files>
+</package>
