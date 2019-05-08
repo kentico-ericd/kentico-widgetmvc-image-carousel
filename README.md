@@ -10,7 +10,9 @@ You can use Visual Studio's Package Manager to install the widget from [NuGet](h
 
 ## Usage
 
-The widget requires at least one content-only page type which will represent the carousel items. The page type must contain the following fields:
+This widget requires jQuery to be loaded on the live site, in the page's &lt;head&gt;.
+
+To begin using the widget, you must create at least one content-only page type which will represent the carousel items. The page type must contain the following fields:
 
 * __Title__ (Text) - The title of a slide
 * __Text__ (Text) - The text of a slide
@@ -20,5 +22,7 @@ Optionally, the page type can contain two other fields which are used to display
 
 * __CtaText__ (Text) - The text of the CTA button
 * __CtaUrl__ (Text) - Where the user will be redirected to
+
+All of these fields can use the Text Box form control, though for the Image field you can use Media Selector.
 
 Once you have one or more of these page types, you can add the widget to a page, and use the Page Type inline editor to select your page type, and the Path inline editor to tell the widget from where to load the slides.

@@ -1,0 +1,216 @@
+﻿@charset "UTF-8";
+
+.o-wrapper {
+    margin-top: 40px;
+    font-family:Arial;
+}
+
+    .o-wrapper h2 {
+        text-align: center;
+    }
+
+.c-slider {
+    background: none;
+    max-width: 60rem;
+    margin: auto;
+    margin-top: 2.5rem;
+}
+
+    .c-slider:after {
+        content: '' !important;
+        display: block !important;
+        clear: both !important;
+    }
+
+    .c-slider .slick-dots {
+        margin: 20px 0 0 10px;
+        padding: 0;
+    }
+
+    .c-slider .c-btn {
+        display: inline-block;
+        text-decoration: none;
+        background: #000;
+        color: #fff;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .c-slider .c-btn:hover {
+        background:blue;
+    }
+    
+    @media (min-width: 480px) {
+            .c-slider .slick-dots {
+        margin: 20px 0 0 30px;
+    }
+}
+
+.c-btn {
+    position:absolute;
+    bottom: 0;
+    left: 30px;
+}
+
+.c-slider .slick-dots li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+    .c-slider .slick-dots li button {
+        border: 0;
+        height: 20px;
+        width: 20px;
+        background: none;
+        border-radius: 50%;
+        font-size: 0;
+        border: 2px solid #000;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .c-slider .slick-dots li.slick-active button {
+        background: #000;
+    }
+
+.c-slider .slick-arrow {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    height: 100px;
+    border: 0;
+    bottom: 0;
+    margin: auto;
+    background: none;
+    cursor: pointer;
+    font-size: 0;
+    display: none !important;
+}
+
+@media (min-width: 1280px) {
+    .c-slider .slick-arrow {
+        display: block !important;
+    }
+}
+
+.c-slider .slick-arrow.slick-prev::after {
+    content: "\e903";
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-size: 70px;
+    color: #ccc;
+}
+
+.c-slider .slick-arrow.slick-next {
+    left: auto;
+    right: -100px;
+}
+
+    .c-slider .slick-arrow.slick-next::after {
+        content: "\e901";
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-size: 70px;
+        color: #ccc;
+    }
+
+.c-slider .slick-arrow:hover::after {
+    color: #000;
+}
+
+.c-slider .slick-slide {
+    width: 100%;
+    position: relative;
+    padding: 0 10px;
+    outline: none;
+}
+
+@media (min-width: 480px) {
+    .c-slider .slick-slide {
+        padding: 0 30px;
+    }
+}
+
+.c-slider .slick-slide .c-banner-content .content {
+    display: block;
+    width: 100%;
+    z-index: 5;
+}
+
+@media (min-width: 480px) {
+    .c-slider .slick-slide .c-banner-content .content {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .c-slider .slick-slide .c-banner-content .content {
+        padding: 0px;
+    }
+}
+
+.c-slider .slick-slide .c-banner-content .content .date {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.c-slider .slick-slide .c-banner-content .content p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+.c-slider .slick-slide .img {
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+}
+
+@media (min-width: 480px) {
+    .c-slider .slick-slide .img {
+        width: 40%;
+        margin-left: 10%;
+        float: right;
+        margin-top: 10px;
+    }
+}
+
+.c-slider .slick-slide .img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    right: -10px;
+    left: 10px;
+    bottom: 0px;
+    background: #fff;
+    display: none;
+}
+
+@media (min-width: 480px) {
+    .c-slider .slick-slide .img::before {
+        display: block;
+    }
+}
+
+.c-slider .slick-slide .img img {
+    width: 100%;
+    height: auto;
+    float: right;
+    position: relative;
+    z-index: 3;
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'icomoon';
+    src: url("/Carousel/fonts/icomoon.eot?3ux4te");
+    src: url("/Carousel/fonts/icomoon.eot?3ux4te#iefix") format("embedded-opentype"), url("/Carousel/fonts/icomoon.woff2?3ux4te") format("woff2"), url("/Carousel/fonts/icomoon.ttf?3ux4te") format("truetype"), url("/Carousel/fonts/icomoon.woff?3ux4te") format("woff"), url("/Carousel/fonts/icomoon.svg?3ux4te#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

@@ -521,24 +521,22 @@
     <Compile Include="Models\InlineEditors\PathTextBoxEditor\PathTextBoxEditorModel.cs" />
     <Compile Include="Models\Widgets\CarouselWidget\CarouselWidgetProperties.cs" />
     <Compile Include="Models\Widgets\CarouselWidget\CarouselWidgetViewModel.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="packages\Facebook.6.4.2\serializers\JsonNetSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Views\Shared\InlineEditors\_PageTypeSelector.cshtml">
+    <Content Include="..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Views\Shared\InlineEditors\_PageTypeSelector.cshtml">
       <Link>Views\Shared\InlineEditors\_PageTypeSelector.cshtml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Views\Shared\InlineEditors\_PathTextBoxEditor.cshtml">
+    </Content>
+    <Content Include="..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Views\Shared\InlineEditors\_PathTextBoxEditor.cshtml">
       <Link>Views\Shared\InlineEditors\_PathTextBoxEditor.cshtml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Views\Shared\Widgets\_CarouselWidget.cshtml">
+    </Content>
+    <Content Include="..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Views\Shared\Widgets\_CarouselWidget.cshtml">
       <Link>Views\Shared\Widgets\_CarouselWidget.cshtml</Link>
-    </None>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
     <None Include="bin\Debug\kentico-widgetmvc-image-carousel.dll.config" />
     <None Include="bin\Debug\Views\Shared\InlineEditors\_PageTypeSelector.cshtml" />
@@ -547,6 +545,9 @@
     <None Include="obj\Debug\kentico-widgetmvc-image-carousel.csproj.CopyComplete" />
     <None Include="obj\Debug\kentico-widgetmvc-image-carousel.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\kentico-widgetmvc-image-carousel.csprojAssemblyReference.cache" />
+    <None Include="Package.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="packages\AngleSharp.0.9.9\.signature.p7s" />
     <None Include="packages\AngleSharp.0.9.9\AngleSharp.0.9.9.nupkg" />
@@ -768,12 +769,24 @@
     <Analyzer Include="..\..\..\..\..\..\inetpub\wwwroot\K12DG\packages\AWSSDK.S3.3.1.9.0\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Content\InlineEditors\PageTypeSelector\pagetypeselector.js">
+    <Content Include="..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Content\InlineEditors\PageTypeSelector\pagetypeselector.js">
       <Link>Content\InlineEditors\PageTypeSelector\pagetypeselector.js</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Content\InlineEditors\PathTextBoxEditor\pathtextboxeditor.js">
+    <Content Include="..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Content\InlineEditors\PathTextBoxEditor\pathtextboxeditor.js">
       <Link>Content\InlineEditors\PathTextBoxEditor\pathtextboxeditor.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Content\Widgets\CarouselWidget\custom.css">
+      <Link>Content\Widgets\CarouselWidget\custom.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Content\Widgets\CarouselWidget\slick.css">
+      <Link>Content\Widgets\CarouselWidget\slick.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\..\..\inetpub\wwwroot\K12DG\DancingGoatMvc\Content\Widgets\CarouselWidget\slick.min.js">
+      <Link>Content\Widgets\CarouselWidget\slick.min.js</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include=".gitignore" />

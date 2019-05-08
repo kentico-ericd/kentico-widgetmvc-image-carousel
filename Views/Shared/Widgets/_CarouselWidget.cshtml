@@ -1,4 +1,5 @@
-﻿@using KenticoMarketplace.Models.InlineEditors.PageTypeSelector
+﻿@using CMS.Helpers
+@using KenticoMarketplace.Models.InlineEditors.PageTypeSelector
 @using KenticoMarketplace.Models.InlineEditors.PathTextBoxEditor
 @using KenticoMarketplace.Models.Widgets.CarouselWidget
 @model KenticoMarketplace.Models.Widgets.CarouselWidget.CarouselWidgetViewModel
@@ -63,7 +64,7 @@
                             }
                         }
                     </div>
-                    <br />
+                    
                     <div class="img">
                         <img src="@URLHelper.GetAbsoluteUrl(image)" alt="@title">
                     </div>
