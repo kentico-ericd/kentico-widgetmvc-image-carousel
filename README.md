@@ -1,3 +1,5 @@
+[![Version](https://img.shields.io/nuget/v/EricD.Kentico.MvcWidget.ImageCarousel.svg)](https://www.nuget.org/packages/EricD.Kentico.MvcWidget.ImageCarousel)
+
 # Image carousel MVC widget
 
 This custom MVC page builder widget can be used to add a carousel to your pages which displays images, text, and optionally a button to redirect to a new page.
